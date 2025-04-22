@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="w-full h-screen flex flex-col items-center bg-[#FFC0CB] pt-[20px]">
+        <h1 class="text-[30px] text-[#8B008B] font-bold">Calculadora de Aluguel de Carros</h1>
+        <p>Calcule facilmente o valor da diária do seu carro alugado com base nos dias e km's rodados.</p>
+        <div class="w-[400px] h-auto bg-[#BA55D3] mt-[30px] rounded-[10px]">
+            <div class="w-full h-[10%] flex justify-center items-center">
+                <h1 class="text-[25px] font-bold text-[#8B008B]">Calculadora de Diária</h1>
+            </div>
+            <div class="w-full h-[90%] p-[10px] flex flex-col">
+                <label for="dia" class="font-bold mt-5 text-[#8B008B]">Dias de aluguel</label>
+                <input type="number" id="dia" class="w-full rounded-[5px] border border-[#8B008B] cursor-pointer">
+                <label for="Km" class="font-bold mt-5 text-[#8B008B]">Km rodados</label>
+                <input type="number" id="km" class="w-full rounded-[5px] border border-[#8B008B] cursor-pointer">
+                <label for="categoria" class="font-bold  mt-5 text-[#8B008B]">Tipo de Veículos</label>
+                <select id="categoria" class="w-full rounded-[5px] border border-[#8B008B] cursor-pointer">
+                    <option value="economico" class=" font-bold text-[#8B008B]">Econômico</option>
+                    <option value="intermediario" class="font-bold text-[#8B008B]">Intermediário</option>
+                    <option value="luxo" class=" font-bold text-[#8B008B]">Luxo</option>
+                </select>
+
+                <button
+                    id="calcular" class="w-full p-2 rounded-md bg-[#FFC0CB] text-[#8B008B] font-bold border border-[#8B008B] cursor-pointer">
+                    Calcular
+                </button>
+                <div class="w-full bg-[#FFC0CB] rounded-lg mt-4 p-2">
+                    <h4 class="font-bold text-[18px] text-[#8B008B]">Resultado</h4>
+                    <div class="w-full flex justify-between">
+                        <p>Valor da diária (dia): </p>
+                        <p id="result-diaria"></p>
+                    </div>
+                    <div class="w-full flex justify-between">
+                        <p>Custo das diárias:<span id="total-dias"></span></p>
+                        <p id="result-total-dias"></p>
+                    </div>
+                    <div class="w-full flex justify-between">
+                        <p>Valor por Km:</p>
+                        <p id="result-km"></p>
+                    </div>
+                    <div class="w-full flex justify-between">
+                        <p>Custo por Km (Km):<span id="total-kms"></span></p>
+                        <p id="result-total-kms"></p>
+                    </div>
+                    <div class="w-full flex justify-between border-t border-[#8B008B]">
+                        <p class="font-bold text-[#8B008B]">Valor Total:</p>
+                        <p id="result-total"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </div>
+
+</body>
+
+</html>
